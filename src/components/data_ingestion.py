@@ -22,7 +22,7 @@ class DataIngestion:
             df = pd.read_csv('notebook/data/stud.csv') #here we get data from databases such as mongoDB etc
             logging.info("read the dataset as dataframe")
             
-            os.makedirs(os.path.dirname(self.ingestion_config.train_data_path))
+            os.makedirs(os.path.dirname(self.ingestion_config.train_data_path) , exist_ok=True)
 
             df.to_csv(self.ingestion_config.raw_data_path, index=False, header=True)
 
