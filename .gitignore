@@ -176,4 +176,4 @@ cython_debug/
 .pypirc
 
 
-.catboost_info/
+catboost_info/
